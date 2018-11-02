@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+<meta charset="utf-8">
+<meta name="description" content="multiple nested for statements to form a diamond">
+    <link rel="stylesheet" type="text/css" href= ../stylesheet2.css>
+<title>PROJECT 5P1</title>
+  <STYLE>
+      div.panel,p.flip
+{
+padding:2px;
+background:white;
+margin: 0;
+} 
+       p {
+           color: brown;
+       }
+       
+.error {
+	color: red;
+	margin: 3px;
+	background-color: #ffc;
+}
+       .hide {
+    display: none;
+}
+      
+      
+    </style>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+<script> 
+
+$(document).ready(function(){
+  $(".flip").click(function(){
+    $(".panel").slideToggle("slow");
+  });
+});
+
+
+    $(document).ready(function(){
+
+  $("#myform").validate({
+
+		messages: {
+			firstName: "Please enter your name",
+            lastName: "Please enter your last name",
+            age: "Please select your age group",
+            hobby:"Please check at least one box!",
+        }   
+
+ });
+});
+    </script>
+    </head>
+    <body>
+    <h1>PART 1</h1>    
+    <h2>FORM VALIDATION</h2>  
+        <div id="moz">
+
+<div class="flip">Click Here to Show/Hide Instructions</div>
+
+<div class="panel"><p>This form contains an input text box, radio buttons, checkboxes. 
+These are personal information to be filled by every student.</p>
+</div>
+
+
+ <form action="mailto:moodialmasri@gmail.com" method="post"  id="myform" name="myform">
+
+    <fieldset><legend>Contact Name</legend>    
+   First Name:<input type="text" name="firstName" class="required" autofocus>
+        <br>
+   Last Name:<input type="text" name="lastName" class="required">   
+        
+        </fieldset>
+          
+        
+  <fieldset id="age">
+    <legend>Age Group</legend>
+    <input type="radio" name="age" class="required" value="18-30">18-30
+    <input type="radio" name="age" class="required" value="30-45">30-45
+    <input type="radio" name="age" class="required" value="45-65">45-65
+    <label class="error hide" for="age"></label>
+</fieldset>
+   
+  
+    <fieldset>  
+        <legend>Hobby</legend>
+    <table id="hobby">
+    <tr>
+        <td><input type="checkbox" name="hobby" value="reading" class="required">Reading</td>
+        <td><input type="checkbox" name="hobby" value="hiking" class="required">Hiking</td>
+        <td><input type="checkbox" name="hobby" value="swimming" class="required">Swimming</td>
+        <td><input type="checkbox" name="hobby" value="Photography" class="required">Photography</td>
+        <td><input type="checkbox" name="hobby" value="music" class="required">Music</td>
+    </tr>
+</table>
+        </fieldset>
+<label class="error hide" for="hobby"></label>
+       
+    <input type="submit" id="submit_button" value="SUBMIT">    
+    <input type="reset" value="RESET" onclick="window.location.reload();">    
+        
+          </form>
+        </div>
+        <div class="home">    
+        <a href="index7.htm">HOME</a>
+    </div>
+    </body>
+
+</html>

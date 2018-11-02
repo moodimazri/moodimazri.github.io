@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+<meta charset="utf-8">
+<meta name="description" content="multiple nested for statements to form a diamond">
+<link rel="stylesheet" type="text/css" href= ../stylesheet2.css>
+    
+<title>PROJECT 5P3</title>
+<style>
+
+table
+{
+border-collapse:collapse;
+width: 450px;
+}
+table, td
+{
+border:1px solid black;
+margin: auto;    
+}
+    input[type=text] {
+    display: block;
+    width: 20%;
+    padding: 3px 2px;   
+    box-sizing: border-box;
+    border-radius: 6px;    
+}
+    input[type=button] {
+    width: 20%;
+    background-color: gray;
+    color: white;
+    padding: 3px 2px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;  
+}
+    .instcs {
+        color: black;
+    }
+</style>    
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> -->
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+<script>
+$(function() {
+ $( "#dialog" ).dialog({
+  autoOpen: false,
+  show: {
+    effect: "blind",
+    duration: 1000
+  },
+
+  hide: {
+    effect: "explode",
+    duration: 1000
+  }
+ });
+
+ $( "#opener" ).click(function() {
+  $( "#dialog" ).dialog( "open" );
+ });
+});
+</script>
+    <script>
+    
+        var stateArr = [["AL", "Alabama", "Montgomery", "4,779,736"],
+                       ["AK", "Alaska", "Juneau", "710,231"],
+                       ["AZ", "Arizona", "Phoenix", "6,392,017"],
+                       ["AR", "Arkansas", "Little Rock", "2,915,918"],
+                       ["CA", "California", "Sacramento", "37,253,956"],
+                       ["CO", "Colorado", "Denver", "5,029,196"]];
+        function stateInfo() {
+            
+            var stateInpt = document.forms["myForm"].elements["keyInSt"].value;
+            stateInpt = stateInpt.toUpperCase();
+            var result = false;
+            for(var row = 0; row < stateArr.length; row++) {
+         if(stateArr[row][0].toUpperCase() == stateInpt || (stateArr[row][1].toUpperCase() == stateInpt))            {
+            
+             document.forms["myForm"].elements["capital"].value = stateArr[row][2];
+             document.forms["myForm"].elements["people"].value = stateArr[row][3];
+             document.forms["myForm"].elements["valid"].value = "";
+            
+             result = true;
+             break;
+            }
+            }
+        
+        if(result == false) {
+            document.forms["myForm"].elements["valid"].value = "Enter a Valid State!";
+    
+        }
+        }
+          
+    </script>
+    </head>
+    <body>       
+<h1>PART 2</h1>      
+<h2>TWO DIMENSIONAL ARRAYS AMERICAN STATES' 2010 CENSUS DATA</h2>
+<p>Press the button "click for instructions" and it will guide you through the process!</p>        
+        
+<div id="dialog" title="Instructions">
+<p class="instcs">Enter The State Name For Information On Capital &amp; Population </p>
+<p class="instcs">Enter The State Name For Information On Capital &amp; Population </p>
+</div>
+<br><br>
+    <table>
+    <tr><th>State Abbr</th><th>State Name</th><th>Capital</th><th>Population</th></tr>
+    <tr><td>AL</td><td>Alabama</td><td>Montgomery</td><td>4,779,736</td></tr>
+    <tr><td>AK</td><td>Alaska</td><td>Juneau</td><td>710,231</td></tr>
+    <tr><td>AZ</td><td>Arizona</td><td>Phoenix</td><td>6,392,017</td></tr>
+    <tr><td>AR</td><td>Arkansas</td><td>Little Rock	</td><td>2,915,918</td></tr>
+    <tr><td>CA</td><td>California</td><td>Sacramento</td><td>37,253,956</td></tr>
+    <tr><td>CO</td><td>Colorado</td><td>Denver</td><td>5,029,196</td></tr>
+    </table> 
+    <button id="opener">Click for instructions</button>    
+    <br><br>    
+    <form name="myForm">
+       <label>State</label>
+    <input type="text" name="keyInSt" autofocus> 
+
+        
+ <br><br>
+        <label>Population</label>
+<input type="text"  name="people" id="people"><br>
+Capital<input type="text" name="capital">   <br>     
+
+Validation<input type="text"  name="valid" id="valid"><br>
+<input onclick="stateInfo();" type="button" value="State Info">
+      
+
+        
+        
+<input type="reset" value="Reset" onclick="location.reload();">
+<div class="home">    
+        <a href="index7.htm">HOME</a>
+    </div>        
+</form>    
+        
+    </body>
+    </html>

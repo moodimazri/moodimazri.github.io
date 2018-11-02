@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+<meta charset="utf-8">
+<meta name="description" content="Part 2">
+<link rel="stylesheet" type="text/css" href= ../stylesheet2.css> 
+    
+<title>Object Exercise - charAt()</title>
+
+<script>
+
+         function search()
+         {
+            var count=0;
+            
+            var key=document.getElementById("key").value.toLowerCase().charAt( 0 );
+             
+
+            var stringToSearch=document.forms["myForm"].elements["alphabit"].value;
+            var stringToSearch=stringToSearch.toLowerCase(); 
+
+           var myText = "<html>\n";
+           myText += "<head>\n";
+           myText += "<title>Invalid number</title>\n";
+           myText += "</head>\n";
+           myText += "<body>\n";
+           myText += "<div align='center'>\n";
+           myText += "<h4>Invalid number " + key + " Search character not found in text string!</h4>\n";
+           myText += "<input type='button' value='Close Window' onclick='window.close()'>\n";
+           myText += "</div>\n";
+           myText += "</body>\n";
+           myText += "</html>";
+        
+  
+                        
+             for (i=0; i < stringToSearch.length; i++)
+                     {
+
+                    if (stringToSearch.charAt(i) == key)
+                             count++;     
+                     }         
+      
+            if ( count == 0 )
+            {
+              // document.getElementById("output").value=key + " not found";
+          
+           
+            var errWindow = window.open("", "new_window", "top=220,left=50,width=300,height=100");
+          
+            errWindow.focus();
+            errWindow.document.write(myText);
+            errWindow.document.close();
+              
+              }
+
+            else
+            {
+               document.getElementById("output").value=count + 
+                  " occurrence(s) of " + key + " found";
+            }
+         }
+</script>
+
+<style>
+    
+      .body { width: 550px; margin: 0px auto;}
+   
+</style>
+
+</head>
+
+<body onload="document.getElementById('alphabit').focus();">
+
+<section class="body">
+        <h1>PART 2 </h1>
+        <h2>charAt() Method</h2>
+
+      <form name="myForm">
+         
+         <p>Enter a text to search for character</p>
+            
+            <input id="alphabit" type="text" size="10" >
+            <input id="key" type="text" size="5">
+            <input type="button" value="Search" onclick="search();">
+             <input type="reset" value="Reset" onClick="location.reload();">
+
+         <br><br>
+         
+             Occurrences of search character:
+            <textarea cols="30" rows="1" id="output"></textarea>
+
+      </form>
+</section>
+</body>
+</html>

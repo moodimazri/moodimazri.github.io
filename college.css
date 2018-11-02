@@ -1,0 +1,117 @@
+body {
+    background-color: rgba(36, 79, 121, 0.4);
+}
+#wrapper {
+    width: 1200px;
+    height: 1200px;
+    margin: auto;
+    background-color: rgba(36, 79, 121, 0.4);
+}
+#left_column {
+    float: left;
+    height: 1000px;
+    width:200px;
+    background-color:rgba(44, 84, 123, 0.71);
+}
+ul, a {
+    margin-top: 50px;
+    font-size: 1.9em;
+    line-height: 2em;
+    font-family: 'Merriweather', serif;
+    color: white;
+    padding: 1px;
+    text-align: center;
+    text-decoration: none;
+    list-style-type: none;
+}
+header {
+    width: 600px;
+    margin-left: 400px;
+    
+}
+h1,h2 {
+    font-size: 1.9em;
+    font-family: 'Merriweather', serif;
+    color: white;
+    text-align: center;
+     padding: 20px 120px 0 0;
+    
+}
+.block1 {
+    text-align: center;
+    padding: 50px 0 0 0;
+    width: 450px;
+    height: 100px;
+    margin-left: 400px;
+    margin-top: 150px;
+   background-color: rgba(36, 79, 121, 0.4);
+    transition:all 0.3s ease;
+}
+.block2 {
+    text-align: center;
+    padding: 50px 0 0 0;
+    width: 450px;
+    height: 100px;
+    margin-left: 400px;
+    margin-top: 20px;
+    background-color: rgba(36, 79, 121, 0.4);
+    transition:all 0.3s ease;
+}
+.block3 {
+    text-align: center;
+    padding: 50px 0 0 0;
+    width: 450px;
+    height: 100px;
+    margin-left: 400px;
+    margin-top: 20px;
+    background-color: rgba(36, 79, 121, 0.4);
+    transition:all 0.3s ease;
+}
+
+.block1:hover
+{
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+}
+.block2:hover
+{
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+}
+    .block3:hover
+{
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+}
+footer {
+    background-color:rgba(111, 120, 214, 0.1); 
+    width: 1200px;
+    margin: auto;
+    height: 100px;
+	text-align: center;
+}
+.footEnd {
+    padding: 25px;
+    margin: 5px;
+    color: white;
+    font-size: 1em;
+    
+}
+.footMail {
+    color: white;
+    font-size: 1em;
+}
+
+dl {
+   width: 700px;
+    margin-left: 250px;
+    
+}
+dt, dd {
+    font-size: 1.1em;
+    font-family: 'Merriweather', serif;
+    color: white;
+}

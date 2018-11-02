@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Part 1</title>
+     <meta charset="utf">
+    <meta name="description" content="part 1 page of homework 4">
+    <link rel="stylesheet" type="text/css" href="../stylesheet2.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  </head>
+    
+    
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#demo").draggable();
+    $( "#demo2").draggable();  
+  } );
+  </script>
+    
+    <body>
+    <h1>Part 1</h1> 
+    <h2>LOOPING STATEMENT</h2>    
+    <p>Drag these statements &amp; place it anywhere on the screen!</p>    
+    <div id="demo"> </div>
+    <div id="demo2"></div>    
+        
+    </body>
+    
+<script>
+  var product = 1;
+   var sum = 0;    
+    
+for (i = 5; i <= 20; i+=3) {
+    sum += i ;
+    product *= i; 
+    
+}
+    
+   document.getElementById("demo").innerHTML= "The result of 5 + 8 + 11 + 14 + 17 + 20 =  " + sum + "<br>" + "<br>" + " The result of 5 * 8 * 11 * 14 * 17 * 20 =  " + product;
+
+    </script>
+    
+    <script>
+   var i = 3;     
+   var product = 1;
+   var sum = 0;
+       
+do {
+    product *= i;
+    sum += i;
+    i+= 4;
+}        
+        while (i <= 31);
+        document.getElementById("demo2").innerHTML= "The result of 3 * 7 * 11 * 15 * 19 * 23 * 27 * 31 =  " + product + "<br>" + "<br>" + "The result of  3 + 7 + 11 + 15 + 19 + 23 + 27 + 31 =  " + sum;
+    </script>
+     <div class="home">    
+        <a href="../index7.htm">HOME</a>
+   </div>
+</html>
+    

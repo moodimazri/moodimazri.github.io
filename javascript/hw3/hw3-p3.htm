@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+    <html>
+<head>
+<title>Part3</title>
+    <meta charset="utf-8">
+    <meta name="description" content="part3 of homework-3">
+    <link rel="stylesheet" type="text/css" href="../stylesheet2.css">
+    
+        </head>
+        
+        <script> 
+        function celsius(f) {
+        return 5 / 9 * (f - 32);
+}
+        function convertToC() {
+            
+            document.getElementById("errOut").innerHTML = "";
+            var errMsg1="<span style='font-weight: bold; color: red; font-size: 20px;'>Invalid Number</span>";
+            
+        var f = parseFloat(document.getElementById("input").value);
+        var c = celsius(f);
+        document.getElementById("conver").value = c;
+            
+            if(isNaN(f)) {
+            document.getElementById("errOut").innerHTML= errMsg1;
+            return;
+}
+        }
+            function fahrenheit(c) {
+            return (9/5 * c) + 32;
+        }    
+        
+        function convertToF() {
+            
+            document.getElementById("errOut").innerHTML = "";
+            var errMsg2="<span style='font-weight: bold; color: red; font-size: 20px;'>Invalid Number</span>";
+            
+            var c = parseFloat(document.getElementById("input").value);
+            var f = fahrenheit(c);
+            document.getElementById("conver").value = f;
+            
+            if(isNaN(c)) {
+                document.getElementById("errOut").innerHTML= errMsg2;
+                return;
+        }
+        }
+        </script>
+        <style>
+        h1, h2 {
+    
+   text-align: center;
+}
+
+
+body {
+    background-image: url('temp.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}
+            .home_back {
+    width: 80px;
+    margin: 200px 0 0 600px;
+    text-align: center;
+    background-color: rgba(255, 255, 163, 0.6);
+    border: 2px solid white;
+            }
+
+        </style>
+        <body> 
+        <h1>PROJECT 3 PART 3</h1>
+        <h2>CONVERT TEMPERATURE</h2> 
+        
+        <form id="myform">
+        Enter Temperature Value:<input type="text" id="input"  size="10"><br><br>
+        Converted Temperature:  <input type="text" id="conver" size="10">
+        
+<br><br>
+        New Value:<input type="button" onclick="convertToC()" value="celsius"> <br>   
+        <input type="button" onclick="convertToF()" value="fahrenheit">
+        </form>
+        <div id="errOut"></div>  
+        <div class="home_back">    
+        <a href="../index7.htm">HOME</a>
+            </div>
+        </body>
+        
+</html>

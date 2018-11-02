@@ -1,0 +1,86 @@
+body {
+  background-color: rgba(36, 79, 121, 0.4);
+}
+
+#wrapper {
+  width: 1200px;
+  height: 100%;
+  margin: auto;
+  background-color: rgba(36, 79, 121, 0.4);
+}
+
+header {
+  width: 600px;
+  margin-left: 400px;
+  padding: 35px;
+  background-image: url(me-pic.jpg);
+  background-repeat: no-repeat;
+}
+
+#left_column {
+  float: left;
+  height: 1000px;
+  width: 210px;
+  background-color: rgba(44, 84, 123, 0.71);
+}
+
+h1, h2 {
+  font-size: 1.1em;
+  font-family: 'Merriweather', serif;
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.2em;
+  font-family: 'Merriweather', serif;
+  color: white;
+}
+
+#mylife {
+  width: auto;
+  margin-left: 230px;
+  margin-right: 10px;
+  height: 1300px;
+  background-color: rgba(15, 39, 56, 0.81);
+}
+
+ul, a {
+  margin-top: 50px;
+  font-size: 1.6em;
+  line-height: 2em;
+  color: white;
+  padding: 1px;
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+img {
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  height: 500px;
+  margin-left: 200px;
+}
+
+footer {
+  width: auto;
+  text-align: center;
+  background-color: rgba(111, 120, 214, 0.1);
+}
+
+footEnd {
+  text-align: center;
+  padding: 25px;
+  margin: 5px;
+  color: white;
+  font-size: 1em;
+}
+
+.footMail {
+  color: white;
+  font-size: 1em;
+}

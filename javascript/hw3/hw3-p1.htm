@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+    <html>
+<head> 
+<title>Project 3p1</title>
+    <meta charset="utf-8">
+    <meta name="description" content="part1 of homework-3">
+    <link rel="stylesheet" type="text/css" href="../stylesheet2.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+</script>
+</head>
+   
+        <script>
+        function finalAvg() {
+        document.getElementById("errOut").innerHTML = "";
+        var errMsg1 = "<span style='font-weight: bold; color: red; font-size: 20px;'>grade is not valid</span>";
+        var errMsg2 = "<span style='font-weight: bold; color: red; font-size: 20px;'>midexam is not valid</span>";
+        var errMsg3 = "<span style='font-weight: bold; color: red; font-size: 20px;'>final grade not valid</span>";
+        var errMsg4 = "<span style='font-weight: bold; color: red; font-size: 20px;'>ACR grade not valid</span>"; 
+        
+        var hwAvg = parseInt(document.getElementById("hwAverage").value);
+        var midExm = parseInt(document.getElementById("midtermScore").value);
+        var finlExm = parseInt(document.getElementById("finalScore").value);
+        var acr = parseInt(document.getElementById("acr").value);   
+           
+if (isNaN(hwAvg)) {
+document.getElementById("errOut").innerHTML = errMsg1;
+return;
+} else if (isNaN(midExm)) {
+document.getElementById("errOut").innerHTML = errMsg2;
+return;
+} else if (isNaN(finlExm)) {
+document.getElementById("errOut").innerHTML = errMsg3;
+return;
+} else if (isNaN(acr)) {
+document.getElementById("errOut").innerHTML = errMsg4;
+return;
+}
+ var finalAvg = (.5 * hwAvg) + (.2 * midExm) + (.2 * finlExm) + (.1 * acr); 
+           document.getElementById("result").value = finalAvg.toFixed(0);
+        }
+        </script>
+<style> 
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+            h1, h2{
+                text-align: center;
+            }
+            input {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;           
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+            }
+            
+</style>
+        <body>
+            <h1>PROJECT 3 PART1</h1>
+            <h2>STUDENS GRADES &amp; FINAL AVERAGES</h2>
+            <p>Enter the scores for student in every form blelow to get the average</p>
+            <form id="myform">
+                <table>
+                    <tr>
+                    <td>Student Homework Average:</td>    
+                    <td><input type="text" id="hwAverage" size="10"></td>
+                    </tr>
+                    <tr>
+                    <td>Midterm Exam Score:</td>
+                    <td><input type="text" id="midtermScore" size="10"></td>
+                    </tr>
+                    <tr>
+                    <td>Final Exam Score:</td>
+                    <td><input type="text" id="finalScore" size="10"></td>
+                    </tr>
+                    <tr>
+                    <td>ACR:</td>   
+                    <td><input type="text" id="acr" size="10"></td>    
+                    </tr>
+                    </table>
+                    <input type="button" onclick="finalAvg();" value="Submit"> 
+                    <input type="button" id="panel"> 
+                     <input id="result"  size="25">
+                <div id="flip">Click to view your grades</div>
+                <div id="panel">Result</div>
+            </form>
+            <div id="errOut"> </div>
+<div class="home">    
+        <a href="../index7.htm">HOME</a>
+   </div>
+        </body>
+</html>

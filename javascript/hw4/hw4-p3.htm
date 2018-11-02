@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+    <html lang="en">
+<head> 
+<title>Part3</title>
+    <meta charset="utf">
+    <meta name="description" content="part 3 page of homework4">
+    <link rel="stylesheet" type="text/css" href="../stylesheet2.css">
+        </head>
+   
+<script>
+    function num() {
+        var item, price, qty, amnt, total = 0;
+        for (item = 1; item <= 5; item++) {
+            switch (item) {
+                case 1:
+                    price = 2.98;
+                    break;
+                case 2:
+                    price = 4.50;
+                    break;
+                case 3:
+                    price = 9.98;
+                    break;
+                case 4:
+                    price = 4.49;
+                    break;
+                case 5:
+                    price = 6.87;
+                    break;
+            }
+
+            qty = document.getElementById("qty" + item).value;
+            amnt = price * qty;
+            total += amnt;
+            document.getElementById("amnt" + item).value = amnt;
+        }
+        document.getElementById("totAmt").value = total;
+    }
+
+</script>
+<body>
+<h1>PART 3</h1>
+<h2>SWITCH STATEMENT</h2>
+<p>Below are the fixed prices of some product, enter the quantity of every product and get the total amount sold</p>    
+</body>
+<table border="2">
+<tr><th>Product #</th><th>Qty</th><th>Price</th><th>Amount</th></tr>
+
+    <tr><td><input type="text" id="item1" value="1"  size="10" disabled></td><td><input type="text" id="qty1"></td><td><input type="text" id="p1" value="2.98" disabled></td><td><input type="text" id="amnt1"></td></tr>
+    
+    <tr><td><input type="text" id="item2"  value="2" size="10"  disabled></td><td><input type="text" id="qty2"></td><td><input type="text" id="p2" value="4.50" disabled></td><td><input type="text" id="amnt2"></td></tr>
+    
+    <tr><td><input type="text" id="item3" value="3" size="10"  disabled></td><td><input type="text" id="qty3"></td><td><input type="text" id="p3" value="9.98" disabled></td><td><input type="text" id="amnt3"></td></tr>
+    
+    <tr><td><input type="text" id="item4" value="4"  size="10" disabled></td><td><input type="text" id="qty4"></td><td><input type="text" id="p4" value="4.49" disabled></td><td><input type="text" id="amnt4"></td></tr>
+    
+    <tr><td><input type="text" id="item5" value="5"  size="10" disabled></td><td><input type="text" id="qty5"></td><td><input type="text" id="p5" value="6.87" disabled></td><td><input type="text" id="amnt4"></td></tr>
+    
+    <tr><td><input type="text" id="totAmt" value="Total Amount Sold" size="30" disabled></td>
+    <td><input type="text" id="totResult" ></td></tr>
+    
+    <tr><td><input type="button" onclick="num()" value="Calculate" size="20" ></td>
+    <td><input type="button" value="RESET" size="25">  </td></tr>
+</table>
+        <div class="home">    
+        <a href="../index7.htm">HOME</a>
+    </div>
+    </html>

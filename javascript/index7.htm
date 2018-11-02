@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+<meta charset="utf-8">
+    <title>Nav Bar test</title>
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+	<script type="text/javascript" src="js/stellarnav.min.js"></script>
+    <link rel="stylesheet" type="text/css" href= stylesheet2.css>
+    <style>
+    footer {
+	width: auto;
+    margin-top: 475px;
+	text-align: center;
+	background-color: rgba(255, 255, 163, 0.8);
+	
+}
+nav {background:#FFF;float:left;}
+nav ul {text-align:center;}
+nav ul li {float:left;display:inline;}
+nav ul li:hover {background:#E6E6E6;}
+nav ul li a {display:block;padding:15px 25px;color:#444;}
+nav ul li ul {position:absolute;width:110px;background:#FFF;}
+nav ul li ul li {width:110px;}
+nav ul li ul li a {display:block;padding:15px 10px;color:#444;}
+nav ul li ul li:hover a {background:#F7F7F7;}
+nav ul li ul.fallback {display:none;}
+nav ul li:hover ul.fallback {display:block;}
+    
+    </style>
+   
+    <script>
+ $('nav li ul').hide().removeClass('fallback');
+$('nav li').hover(
+  function () {
+    $('ul', this).stop().slideDown(100);
+  },
+  function () {
+    $('ul', this).stop().slideUp(100);
+  }
+);
+
+    </script>
+    </head>
+    
+<body>
+        <h1>MAIN NAVIGATION</h1>
+        <h2>PROJECT 1-6</h2>
+    <nav>
+  <ul>
+    <li><a href="index7.htm">Home</a></li>
+    <li>
+      <a href="hw2/hw2.htm">Project2</a>
+      <ul class="fallback">
+        <li><a href="hw2/part1.htm">Part1</a></li>
+        <li><a href="hw2/part2.htm">Part2</a></li>
+        <li><a href="hw2/part3.htm">Part3</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="hw3/hw3.htm">Project3</a>
+      <ul class="fallback">
+        <li><a href="hw3/hw3-p1.htm">Part1</a></li>
+        <li><a href="hw3/hw3-p2.htm">Part2</a></li>
+        <li><a href="hw3/hw3-p3.htm">Part3</a></li>
+        <li><a href="hw3/hw3-p4.htm">Part4</a></li>
+      </ul>
+    </li>
+    <li>
+     <a href="hw4/hw4.htm">Project4</a>
+      <ul class="fallback">  
+    <li><a href="hw4/hw4-p1.htm">Part1</a></li>
+    <li><a href="hw4/hw4-p2.htm">Part2</a></li>
+    <li><a href="hw4/hw4-p3.htm">Part3</a></li>     
+     
+  </ul>
+        </li> 
+      
+      <li>
+     <a href="hw5/hw5.htm">Project5</a>
+      <ul class="fallback">  
+    <li><a href="hw5/hw5-p1-noquery.htm">Part1</a></li>
+    <li><a href="hw5/hw5-p2.htm">Part2</a></li>
+    <li><a href="hw5/hw5-p3.htm">Part3</a></li>     
+          </ul>
+      </li>
+      <li>
+      <a href="hw6/hw6.htm">Project6</a>
+      <ul class="fallback">  
+    <li><a href="hw6/hw6-p1.htm">Part1</a></li>
+    <li><a href="hw6/hw6-p2.htm">Part2</a></li>
+    <li><a href="hw6/hw6-p3.htm">Part3</a></li>     
+          </ul>
+      </li>
+          
+</nav>
+        
+    <footer>
+								<p>Posted by: &copy;Moodi Almasri 
+									<br>
+                                    
+                                    <a class="mail" href="mailto:malmasri@mail.ccsf.edu"></a>
+                                        malmasri@mail.ccsf.edu
+									    
+
+										</p>
+									</footer>
+								
+    	
+					
+    
+    </body>
+        	</html>

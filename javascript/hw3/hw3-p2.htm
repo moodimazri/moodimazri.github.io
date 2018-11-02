@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+    <html>
+<head> 
+<title>PROJECT 2P2</title>
+    <meta charset="utf-8">
+    <meta name="description" content="part2 of homework-3">
+    <link rel="stylesheet" type="text/css" href="../stylesheet2.css"> 
+    <script href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        </head>
+        
+        <script>
+            $(function() {
+$( document ).tooltip();
+});
+            
+        </script>
+       
+
+        <script>
+        function calcTotlErn() {
+        document.getElementById("errOut").innerHTML = "";
+        var errMsg1="<span style='font-weight: bold; color: red; font-size: 20px;'>Invalid Number</span>";
+              
+        var comAmount= .9;
+        var weekSlry = 200;    
+
+        var item1 = parseInt(document.getElementById("itmOne").value);
+        var item2 = parseInt(document.getElementById("itmTwo").value);
+        var item3 = parseInt(document.getElementById("itmThree").value);
+        var item4 = parseInt(document.getElementById("itmFour").value);
+            
+            document.getElementById("int_item1").value = item1;
+            document.getElementById("int_item2").value = item2;
+            document.getElementById("int_item3").value = item3;
+            document.getElementById("int_item4").value = item4;
+            
+            if (isNaN(item1) || isNaN(item2) || isNaN(item3) || isNaN(item4)) {
+                document.getElementById("errOut").innerHTML = errMsg1;
+               return;
+}
+            var totalItm1 = item1 * 239.99;
+            var totalItm2 = item2 * 129.75;
+            var totalItm3 = item3 * 99.95;
+            var totalItm4 = item4 * 350.89;
+            
+            document.getElementById("total_item1").value = totalItm1;
+            document.getElementById("total_item2").value = totalItm2;
+            document.getElementById("total_item3").value = totalItm3;
+            document.getElementById("total_item4").value = totalItm4;
+            
+            
+            
+            var tolAmSold = (totalItm1 + totalItm2 + totalItm3 + totalItm4);
+            var totlErn = (tolAmSold * comAmount) + weekSlry;
+            
+            document.getElementById("final_total").value = tolAmSold.toFixed(2);
+            document.getElementById("salary").value = totlErn.toFixed(2);
+            
+    }  
+        </script>
+    <body>
+    <h1>PROJECT 3 PART 2</h1> 
+        <h2>SALES ITEMS &amp; AMOUNT OF EARNINGS</h2>
+        <p>Enter the amount of items sold below &amp; to get the number of items sold &amp; the total amount sold &amp; the total weekly earnings</p>
+    
+    <section class="body">    
+    <form id="myform">
+        
+    <p><label for="Spell"> Sales person Name: </label><input id="salesNm" name="Saleperson" 
+     title="Please make sure that the salesperson's name is spelled correctly"></p>
+
+    <h3>Input the number of items sold for each item number:</h3>
+    <br>
+        
+    Item1:<input type="text" id="itmOne" class="t"><br>
+    Item2:<input type="text" id="itmTwo" class="t"><br>
+    Item3:<input type="text" id="itmThree" class="t"><br>
+    Item4:<input type="text" id="itmFour"class="t"><br>
+    <br>    
+    <input type="button"  onclick="calcTotlErn();" value="Submit">
+    <input type="reset" value="RESET">    
+    <br><br>
+    <table>
+<tr><th>Item #</th><th>Price</th><th>Number Sold</th><th>Total</th></tr>
+
+<tr><td>1</td><td>$239.99</td><td><input type="text" class="t" id="int_item1"></td><td><input type="text"  class="t" id="total_item1"></td></tr>
+<tr><td>2</td><td>$129.75</td><td><input type="text" class="t" id="int_item2"></td><td><input type="text"  class="t" id="total_item2"></td></tr>
+<tr><td>3</td><td>$99.95</td><td><input type="text" class="t" id="int_item3"></td><td><input type="text"  class="t" id="total_item3"></td></tr>
+<tr><td>4</td><td>$350.89</td><td><input type="text" class="t" id="int_item4"></td><td><input type="text" class="t" id="total_item4"></td></tr>
+<tr><td colspan="3">Total Amount Sold:</td><td><input type="text" class="t" id="final_total"></td></tr>
+<tr><td colspan="3">Total Weekly Earnings:</td><td><input type="text"  class="t" id="salary"></td></tr>
+</table>
+ </form>
+<div id="errOut"></div>        
+</section>
+        <div class="home">    
+        <a href="../index7.htm">HOME</a>
+   </div>
+    
+    </body>
+</html>
+        
+        
+    

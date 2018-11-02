@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Part 2</title>
+     <meta charset="utf">
+    <meta name="description" content="part 2 page of homework 4">
+    <link rel="stylesheet" type="text/css" href="../stylesheet2.css">
+    
+</head>
+
+<body>
+<h1>PART 2</h1>
+<h2>FOR LOOP &amp; NESTED LOOP</h2>
+<p>Below is a calculation of compound interest on a principal of $1000 for interest rates of 5, 6, 7, 8, 9, and 10%, for years 1 through 10. The formula to use, P is the principal, n is the number of years, A is the amount of money accumulated after n years, where, A = P(1 + r)n </p>    
+    
+<div id="total"></div>
+<script>
+    var acomAmont, r;
+    var p = 1000;
+    var output = "";
+
+    for (r = 5; r <= 10; r++) {
+        output += "<table>";
+        output += "<tr><th>Year</th><th>Amount On Deposit</th><th>Interest Rate</th></tr>";
+
+        for (n = 1; n <= 10; n++) {
+            acomAmont = p * Math.pow(1 + r / 100, n);
+            output += "<tr><td>" + n + "</td><td>" + acomAmont + "</td><td>" + r + "%</td></tr>";
+        }
+
+        output += "</table>";
+    }
+    document.getElementById("total").innerHTML = output;
+</script>
+    <div class="home">    
+        <a href="../index7.htm">HOME</a>
+    </div>
+</body>
+</html>
+
+

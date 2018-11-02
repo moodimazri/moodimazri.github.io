@@ -1,0 +1,35 @@
+/*This is the main color of the body(the whole page!)*/
+body {
+    background-color: gainsboro;
+}
+
+/*container that includes: header, nav, content, and footer*/
+#container {
+    background-color: darkgray;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+header {
+    text-align: center;
+    color: navy;
+    margin: auto;
+        
+    } 
+nav {
+    text-align: center;
+        
+}
+
+footer {
+    
+    text-align: center;
+    color: black;
+    text-decoration: underline;
+    margin:400px 100px 10px 100px;
+    
+}
+
+
+
+

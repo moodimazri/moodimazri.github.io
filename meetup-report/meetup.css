@@ -1,0 +1,119 @@
+/* Stylesheet information for meetup sfhtml5 report
+File created date: May/02/2018 
+By: [Mohammed Almasri] */
+
+body {
+	background-color: rgba(1, 5, 0, 0.1);
+}
+
+#wrapper {
+	width: 80%;
+	background-color: #84c9fd;
+	margin: auto;
+	min-width: 850px;
+}
+
+#content {
+	width: 850px;
+	padding: 20px;
+	margin-top: 25px;
+}
+
+#rightcolumn {
+	width: 300px;
+	height: 1100px;
+	background-color: rgba(255, 90, 0, 0.4);
+	position: relative;
+	float: right;
+	left: 110px;
+	top: 80px;
+}
+
+#benefit {
+	background-color: white;
+	color: black;
+	padding: 15px;
+	position: relative;
+	left: 75px;
+}
+
+.yTube {
+	font-size: .8em;
+	text-decoration: underline overline;
+}
+
+img {
+	position: relative;
+	float: right;
+	bottom: 50px;
+	left: 100px;
+	width: 100px;
+	height: 100px;
+}
+
+ul,
+a {
+	font-size: 1.9em;
+	line-height: 2em;
+	text-align: center;
+	color: white;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+.redTitle {
+	text-align: center;
+	width: 300px;
+	background-color: rgba(255, 0, 0, 0.7);
+	padding: 10px;
+}
+
+h1,
+h2,
+h3 {
+	color: white;
+	font-size: 1.2em;
+	font-weight: 200;
+	line-height: 1.5em;
+	padding: 0.5em 0;
+	font-family: 'Merriweather', serif;
+}
+
+#content,
+p:nth-child(1) {
+	color: white;
+	font-size: 1.2em;
+	font-weight: 400;
+}
+
+p {
+	font-family: 'Merriweather', serif;
+}
+
+nav {
+	text-align: center;
+	width: 800px;
+	height: 30px;
+	padding: 30px;
+	position: relative;
+	top: 10px;
+	margin: auto;
+	background-color: rgba(255, 255, 163, 0.8);
+	box-shadow: 4px 4px 6px rgba(198, 149, 85, 0.75);
+}
+
+.pic {
+	color: black;
+	padding: 5px;
+	font-size: 1em;
+}
+
+a.nav {
+	color: black;
+}
+
+footer {
+	background-color: rgba(255, 0, 0, 0.7);
+	width: auto;
+	text-align: center;
+}

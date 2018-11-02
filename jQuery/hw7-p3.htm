@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Photo Album</title>
+      <!--link rel="stylesheet" href="album-flex.css"-->
+       <!-- Add jQuery library -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<link rel="stylesheet" href="source/jquery.fancybox.css?v=2.1.7" type="text/css" media="screen" />
+<script type="text/javascript" src="source/jquery.fancybox.pack.js?v=2.1.7"></script>
+<style>
+    body {
+        background-color:dimgray;
+              
+    }
+    h1,h2,h3 {
+        
+    
+    text-align: center;
+            color: whitesmoke;
+    }
+    #album {
+        width: auto;
+        height: 550px;
+        margin-left: 380px;
+        
+    }
+       </style>
+       <script type="text/javascript">
+	$(document).ready(function() {
+    $(".fancybox").fancybox();
+        
+	});
+</script>   
+   </head>
+   <body>
+       <h1>HOMEWORK 7 PART 3</h1>
+       <h2>PHOTO ALBUM USING JQUERY</h2>
+       <h3>SFHTML5 PHOTO ALBUM</h3>
+       
+       <div id="album">
+       <a class="fancybox" rel="group" href="photo/me-min.jpg"  alt="my image"><img src="photo/me-xl.jpg" width="100" height="110"> </a>
+    
+       <a class="fancybox" rel="group" href="photo/food-min.jpg" alt="sfhtml food"><img src="photo/food-xl.jpg" width="100" height="110"> </a> 
+    
+       <a class="fancybox" rel="group" href="photo/people-min.jpg" alt="sfhtml snack"><img src="photo/people-xl.jpg" width="100" height="110"> </a> 
+    
+       <a class="fancybox" rel="group" href="photo/kitchen-min.jpg" alt="sfhtml snack"><img src="photo/kitchen-xl.jpg" width="100" height="110"></a>
+           
+       <a class="fancybox" rel="group" href="photo/bayb-min.jpg" alt="sfhtml snack"><img src="photo/bayb-xl.jpg" width="100" height="110"></a>
+      </div>
+    </body>
+</html>
+

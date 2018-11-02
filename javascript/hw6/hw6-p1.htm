@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href= ../stylesheet2.css>    
+<title>PROJECT 6P1</title>
+   
+    <script>
+    function roundNum()
+         {
+          var errMsg = "Invalid input";
+
+          if ( isNaN(document.getElementById("number").value) || (document.getElementById("number").value) == "" )
+              {
+               document.getElementById("errOut").innerHTML = errMsg;
+
+              }
+            else {
+
+            var num = parseFloat
+               (document.getElementById("number").value);
+
+            document.myForm.output.value = 
+               "The entered number: " + num +
+               "\n rounded to the nearest integer using math round: " + 
+                  roundToIntegerRound( num ) +
+               "\n rounded to the nearest integer using math floor: " + 
+                  roundToIntegerFloor( num ) +
+               "\n rounded to the nearest tenth using toFixed: " + 
+                  roundToTenthsTofixed( num ) +
+               "\n rounded to the nearest hundredth using math floor: " + 
+                  roundToHundredthsFloor( num ) +
+               "\n rounded to the nearest thousands using math round: " + 
+                  roundToHundredthsRound( num );
+                     
+                 }
+
+          }
+
+         function roundToIntegerRound( number )
+         {
+            return( Math.round( number) );
+         }
+
+         function roundToIntegerFloor( number )
+         {
+            return( Math.floor( number + .5 ) );
+         }
+
+         function roundToTenthsTofixed( number )
+         {
+            return( number.toFixed(1));
+         }
+
+         function roundToHundredthsFloor( number )
+         {
+            return( Math.floor( number * 100 + .5 ) / 100 );
+          }
+        function roundToHundredthsRound( number )
+           {
+            return( Math.round( number * 1000 ) / 100 );
+           }
+
+        function res() {    
+                       document.getElementById("errOut").innerHTML="";
+                       document.getElementById("number").focus();
+                       }
+    </script>
+    
+
+    
+    </head>
+    <body onload="document.getElementById('number').focus();">
+    <h1>PART 1</h1>  
+    <h2>USE OF MATH MRTHOD</h2>
+        
+        
+     
+    <form name="myForm">
+    Enter A Number:<input id="number" type="text">
+    Output Result:<textarea  id="output" cols="55" rows="10" readonly></textarea> 
+        <input type="button" value="Round It!" onclick="roundNum()">    
+        
+    </form>
+        <div id="errOut"></div> 
+         <div class="home">    
+        <a href="index7.htm">HOME</a>
+    </div>
+    </body>
+</html>

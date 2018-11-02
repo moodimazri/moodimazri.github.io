@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+<meta charset="utf-8">
+<meta name="description" content="FAQ page using jQuery">
+<title>Homework-7 jQuery Menue</title>
+<link href="hw7.css" rel="stylesheet">
+<style>
+h2 {
+	background: url(open.png) no-repeat 0 11px;
+	padding: 10px 0 0 25px;
+	cursor: pointer;
+}
+h2.close {
+	background-image: url(close.png);
+}
+.answer {
+	margin-left: 25px;	
+}
+    a{
+        text-decoration: none;
+        
+    }    
+</style>
+
+<!-- Note that you need jQuery version 1.7.1 here - do not use versiom 1.9.1 or later -->
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+ $('.answer').hide();
+ $('.main h2').toggle(
+		function() {
+	       $(this).next('.answer').slideDown();
+		   $(this).addClass('close');
+		},
+		function() {
+		   $(this).next('.answer').fadeOut();
+		   $(this).removeClass('close');
+	  }
+	); // end toggle
+}); // end ready
+</script>
+
+</head>
+
+<body>
+<div class="wrapper">
+<div class="header">
+    <p class="logo"> Homework-7 <i class="mm">The<br>Menue</i></p>
+</div>
+<div class="content">
+	<div class="main">
+<h1>Object Model and Miscellaneous jQuery </h1>
+<h2>Part 1</h2>
+      <div class="answer">
+          <p><a href="hw7-p1.htm">Changing Page Layout HTML &amp; CSS Using jQuery</a></p>
+      </div>
+      <h2>Part 2</h2>
+      <div class="answer">
+          <p><a href="hw7-p2-zila.htm">Using jQuery To Create A Navigation Bar That Links All Homeworks</a></p>
+      </div>
+      <h2>Part 3</h2>
+      <div class="answer">
+          <p><a href="hw7-p3.htm">Using jQuery to Create A Photo Slide Show</a></p>
+      </div>
+</div>
+</div>
+<div class="footer">
+    <p>JavaScript &amp; jQuery <a href=hw7.htm>Homework 7</a><a href="http://ccsf.edu"> City College </a></p>
+</div>
+</div>
+</body>
+</html>
