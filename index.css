@@ -1,5 +1,8 @@
+@media only screen and (max-width: 480px) {
+   
 body {
     background-color: rgba(36, 79, 121, 0.4);
+}
 }
 #wrapper {
     width: 1200px;
