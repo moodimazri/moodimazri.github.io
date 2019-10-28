@@ -1,0 +1,180 @@
+body {
+    background-color: rgba(36, 79, 121, 0.4);
+}
+
+#wrapper {
+    width: 1200px;
+    height: 1200px;
+    margin: auto;
+    background-color: rgba(36, 79, 121, 0.4);
+}
+
+header {
+    width: 600px;
+    margin-left:auto;
+    padding: 35px;
+}
+
+h1 {
+    font-size: 1.9em;
+    font-family: 'Merriweather', serif;
+    color: white;
+    text-align: auto;
+}
+
+p {
+	margin-left: 165px;
+    font-size: 1.4em;
+    line-height: 1.5em;
+    font-family: 'Merriweather', serif;
+    color: white;
+}
+.major {
+	margin-top: 40px;
+	margin-left: -120px;
+	line-height: 1.6em;
+}
+
+#left_column {
+    float: left;
+    height: 750px;
+    width: 200px;
+    background-color: rgba(44, 84, 123, 0.71);
+}
+
+#right_column {
+    width: 1000px;
+    height: 400px;
+    margin-left: 200px;
+    background-color: rgba(36, 79, 121, 0.4);
+}
+
+#mid_column {
+    position: relative;
+    width: 1200px;
+    height: 200px;
+    background-color: rgba(44, 84, 123, 0.71);
+}
+
+ul,
+a {
+    margin-top: 40px;
+	font-size: 1.2em;
+    line-height: 2.6em;
+    font-family: 'Merriweather', serif;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+nav {
+    width: 400px;
+    margin-left: 50px;
+}
+
+.grow {
+    width: 350px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 420px;
+    background-color: rgba(44, 84, 123, 1);
+    transition: all 0.3s ease;
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+.grow:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+footer {
+    width: auto;
+    text-align: center;
+}
+
+.footEnd {
+	float: left;
+    text-align: center;
+	margin-left: 490px;
+    margin-top: 110px;
+    color: white;
+    font-size: 1em;
+}
+
+/*test of social media style*/
+
+
+.socialmedia {
+    float: right;
+	x-margin-top: 90px;
+	x-margin-right: 20px;
+}
+
+li {
+	display:inline;
+	font: 700;
+	
+}
+.social {
+	margin-right: 100px;
+	
+}
+
+/*end of social media style sample*/
+
+
+fa:hover { 
+    opacity: 0.6;
+	
+}
+
+	 
+	@media only screen and (max-width:640px) {
+  /* For mobile phones: */
+	 body{
+	 	width:1199px;
+	 }
+	#wrapper{
+	width: 100%;
+	}
+	#right_column  {
+		width:0%;
+		
+	}
+	#left_column{
+		width:10%;
+		margin-left:10px;
+		margin-right:10px;
+}
+	#mid_column {
+		width:0;
+
+	}
+	#header, .major,h1 {
+		width: 35%;
+	
+	}
+	p,h1,ul{
+		font-size:1em;
+		margin-right:100px;
+	}
+	.grow{
+		width:50%;
+		margin-left:150px;
+		padding:5px;
+}
+	footer{
+			width:50%; 	
+	
+	}
+		.footEnd{
+		margin-left:100px;
+	}   
+		.socialmedia {
+		margin-right:270px;
+	}
+	
+}
